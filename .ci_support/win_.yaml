@@ -1,1 +1,11 @@
-{}
+libxml2:
+- '2.9'
+m2w64_c_compiler:
+- m2w64-toolchain
+pin_run_as_build:
+  libxml2:
+    max_pin: x.x
+  r-base:
+    max_pin: x.x.x
+r_base:
+- 3.4.1
