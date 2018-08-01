@@ -17,7 +17,8 @@ source:
   sha256: 90c83af4b1a304d04f97eaf0c5b651b02135dc15cce7e4e38d732d48ae9e30b8
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
 
   rpaths:
     - lib/R/lib/
@@ -26,15 +27,16 @@ build:
 
 requirements:
   build:
-    - r-base
     - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-    - libxml2 2.9.*
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
+    - r-base
+    - libxml2
 
   run:
     - r-base
-    - libxml2 2.9.*
+    - libxml2
 
 test:
   commands:
