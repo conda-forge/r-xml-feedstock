@@ -1,4 +1,4 @@
-{% set version = "3.98-1.11" %}
+{% set version = "3.98-1.14" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -14,7 +14,7 @@ source:
     - https://cran.r-project.org/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
 
 
-  sha256: 90c83af4b1a304d04f97eaf0c5b651b02135dc15cce7e4e38d732d48ae9e30b8
+  sha256: 219f8df4bb7ac0a770349b953b22c45063201901c6ea7893d0d2f4cab933537c
 
 build:
   number: 0
