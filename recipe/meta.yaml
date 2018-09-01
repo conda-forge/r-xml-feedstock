@@ -1,4 +1,4 @@
-{% set version = "3.98-1.11" %}
+{% set version = '3.98-1.16' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -10,38 +10,46 @@ package:
 source:
   fn: XML_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/XML_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
-
-
-  sha256: 90c83af4b1a304d04f97eaf0c5b651b02135dc15cce7e4e38d732d48ae9e30b8
+    - {{ cran_mirror }}/src/contrib/XML_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
+  sha256: 57da12ded81e1d6f881a9eb43a95617873752a39aca66b24b41a6552c69c815a
 
 build:
+  merge_build_host: True  # [win]
   number: 0
 
   rpaths:
     - lib/R/lib/
     - lib/
-  skip: True  # [win32]
 
 requirements:
   build:
+    - {{ compiler('c') }}        # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
+    - {{posix}}autoconf
+    - {{posix}}automake          # [not win]
+    - {{posix}}automake-wrapper  # [win]
+    - {{posix}}pkg-config
+    - {{posix}}make
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
+
+  host:
     - r-base
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
     - libxml2 2.9.*
 
   run:
     - r-base
     - libxml2 2.9.*
+    - {{native}}gcc-libs         # [win]
 
 test:
   commands:
-    - $R -e "library('XML')"  # [not win]
+    - $R -e "library('XML')"           # [not win]
     - "\"%R%\" -e \"library('XML')\""  # [win]
-
-
 
 about:
   home: http://www.omegahat.net/RSXML
@@ -52,8 +60,12 @@ about:
   license_family: BSD
   license_file: LICENSE
 
-
-
 extra:
   recipe-maintainers:
+    - johanneskoester
+    - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
     - croth1
+    - dbast
