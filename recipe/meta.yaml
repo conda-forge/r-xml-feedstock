@@ -49,10 +49,11 @@ test:
 
 about:
   home: http://www.omegahat.net/RSXML
-  license: BSD_2_clause
+  license: BSD-2-Clause
   summary: Many approaches for both reading and creating XML (and HTML) documents (including DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath' "interpreter".
   license_family: BSD
-  license_file: LICENSE
+  license_file:
+    - LICENSE
 
 extra:
   recipe-maintainers:
