@@ -1,4 +1,4 @@
-{% set version = "3.99-0.3" %}
+{% set version = "3.99-0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/XML_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
-  sha256: 81b7a76308f3b7378dff525eff0180bba73b31117483a26cc3aa172d15c7f753
+  sha256: a576354b59ce1fa6454a450d1b99e21dda12ec2137c2c2ba6d1bdc7742e686af
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
+  skip: True  # [r_base != "3.6.3"]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -35,11 +36,11 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - libxml2 2.9.*
+    - libxml2 >=2.6.3
 
   run:
     - r-base
-    - libxml2 2.9.*
+    - libxml2 >=2.6.3
     - {{ native }}gcc-libs         # [win]
 
 test:
@@ -49,12 +50,11 @@ test:
 
 about:
   home: http://www.omegahat.net/RSXML
-  license: BSD_2_clause
-  summary: Many approaches for both reading and creating XML (and HTML) documents (including
-    DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath'
-    "interpreter".
+  license: BSD-2-Clause
+  summary: Many approaches for both reading and creating XML (and HTML) documents (including DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath' "interpreter".
   license_family: BSD
-  license_file: LICENSE
+  license_file:
+    - LICENSE
 
 extra:
   recipe-maintainers:

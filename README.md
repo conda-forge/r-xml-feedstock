@@ -5,7 +5,7 @@ Home: http://www.omegahat.net/RSXML
 
 Package license: BSD_2_clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Many approaches for both reading and creating XML (and HTML) documents (including DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath' "interpreter".
 
