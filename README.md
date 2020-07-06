@@ -3,7 +3,7 @@ About r-xml
 
 Home: http://www.omegahat.net/RSXML
 
-Package license: BSD_2_clause
+Package license: BSD-2-Clause
 
 Feedstock license: BSD-3-Clause
 
