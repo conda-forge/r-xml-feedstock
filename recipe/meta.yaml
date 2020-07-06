@@ -15,7 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: True  # [r_base != "3.6.3"]
+  skip: True  # [r_base == "3.6.3"]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +37,6 @@ requirements:
   host:
     - r-base
     - libxml2 >=2.6.3
-
   run:
     - r-base
     - libxml2 >=2.6.3
