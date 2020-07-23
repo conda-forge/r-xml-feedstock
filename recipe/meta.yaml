@@ -1,4 +1,4 @@
-{% set version = "3.99-0.4" %}
+{% set version = "3.99-0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/XML_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
-  sha256: a576354b59ce1fa6454a450d1b99e21dda12ec2137c2c2ba6d1bdc7742e686af
+  sha256: 60529b7360f162eba07da455eeb9b94a732b2dd623c49e0f04328a2e97bd53a6
 
 build:
   merge_build_host: true  # [win]
   number: 0
-  skip: True  # [r_base != "3.6.3"]
+  skip: true  # [r_base != "3.6.3"]
   rpaths:
     - lib/R/lib/
     - lib/
