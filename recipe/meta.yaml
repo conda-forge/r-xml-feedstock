@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 2
   skip: true  # [r_base == "3.6" or win]
   rpaths:
     - lib/R/lib/
@@ -36,11 +36,11 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - libxml2 >=2.6.3
+    - libxml2
 
   run:
     - r-base
-    - libxml2 >=2.6.3
+    - libxml2
     - {{ native }}gcc-libs         # [win]
 
 test:
