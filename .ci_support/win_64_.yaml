@@ -4,8 +4,6 @@ channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
-libxml2:
-- '2.9'
 m2w64_c_compiler:
 - m2w64-toolchain
 pin_run_as_build:

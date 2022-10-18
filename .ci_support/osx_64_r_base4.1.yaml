@@ -10,8 +10,6 @@ channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
-libxml2:
-- '2.9'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
