@@ -35,11 +35,11 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - {{ native }}libxml2          # [win]
+    - {{ native }}libxml2
 
   run:
     - r-base
-    - {{ native }}libxml2          # [win]
+    - {{ native }}libxml2
     - {{ native }}gcc-libs         # [win]
 
 test:
