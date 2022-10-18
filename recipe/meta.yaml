@@ -15,15 +15,14 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 2
-  skip: true  # [r_base == "3.6" or win]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -36,11 +35,13 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - libxml2
+    - libxml2                      # [not win]
+    - {{ native }}libxml2          # [win]
 
   run:
     - r-base
-    - libxml2
+    - libxml2                      # [not win]
+    - {{ native }}libxml2          # [win]
     - {{ native }}gcc-libs         # [win]
 
 test:
