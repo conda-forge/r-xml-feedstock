@@ -13,7 +13,7 @@ cran_mirror:
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
 libxml2:
-- '2.9'
+- '2.10'
 pin_run_as_build:
   r-base:
     min_pin: x.x
