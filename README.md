@@ -1,11 +1,11 @@
-About r-xml
-===========
+About r-xml-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xml-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.omegahat.net/RSXML
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-xml-feedstock/blob/main/LICENSE.txt)
 
 Summary: Many approaches for both reading and creating XML (and HTML) documents (including DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath' "interpreter".
 
