@@ -3,7 +3,7 @@ BUILD:
 c_compiler:
 - gcc
 c_compiler_version:
-- '11'
+- '12'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -17,7 +17,7 @@ cran_mirror:
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64
 libxml2:
-- '2.10'
+- '2.11'
 pin_run_as_build:
   r-base:
     min_pin: x.x
