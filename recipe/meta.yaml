@@ -29,19 +29,16 @@ requirements:
     - {{ posix }}autoconf
     - {{ posix }}automake          # [not win]
     - {{ posix }}automake-wrapper  # [win]
-    - {{ posix }}pkg-config
+    - pkg-config
     - {{ posix }}make
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - libxml2                      # [not win]
-    - libxml2          # [win]
-
+    - libxml2
   run:
     - r-base
-    - libxml2                      # [not win]
-    - libxml2          # [win]
+    - libxml2
 
 test:
   commands:
@@ -54,6 +51,7 @@ about:
   summary: Many approaches for both reading and creating XML (and HTML) documents (including DTDs), both local and accessible via HTTP or FTP.  Also offers access to an 'XPath' "interpreter".
   license_family: BSD
   license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_2_clause
     - LICENSE
 
 extra:
