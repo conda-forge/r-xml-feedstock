@@ -1,7 +1,7 @@
 for %%e in (win ucrt) do (
     move src\Makevars.%%e src\Makevars.%%e.orig
     (
-        echo LIB_XML = "%LIBRARY_PREFIX:\=/%/mingw-w64"
+        echo LIB_XML = "%LIBRARY_PREFIX:\=/%"
         type src\Makevars.win.orig
     ) > src\Makevars.%%e
 )
