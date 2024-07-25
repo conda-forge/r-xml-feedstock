@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cp $RECIPE_DIR/Makevars src/Makevars
+
 export DISABLE_AUTOBREW=1
 
 # shellcheck disable=SC2086
