@@ -15,7 +15,7 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 libxml2:
 - '2'
 pin_run_as_build:
