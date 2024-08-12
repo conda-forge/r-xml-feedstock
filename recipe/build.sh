@@ -12,5 +12,5 @@ fi
 
 ## BEGIN DEBUG
 cat src/Makevars
-cat src/R/supports.R
+cat R/supports.R
 ## END DEBUG
