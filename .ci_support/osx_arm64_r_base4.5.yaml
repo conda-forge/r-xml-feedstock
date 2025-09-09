@@ -1,28 +1,30 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+MACOSX_SDK_VERSION:
+- '11.0'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '13'
+- '19'
 c_stdlib:
-- sysroot
+- macosx_deployment_target
 c_stdlib_version:
-- '2.17'
-cdt_name:
-- conda
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
-docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma9
 libxml2:
-- '2'
+- '2.13'
+macos_machine:
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   r-base:
     min_pin: x.x
     max_pin: x.x
 r_base:
-- '4.3'
+- '4.5'
 target_platform:
-- linux-ppc64le
+- osx-arm64
