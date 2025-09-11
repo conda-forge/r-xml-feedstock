@@ -36,7 +36,9 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - liblzma-devel
     - libxml2
+    - zlib
   run:
     - r-base
     - libxml2
