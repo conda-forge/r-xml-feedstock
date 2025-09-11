@@ -16,6 +16,8 @@ channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
+liblzma_devel:
+- '5'
 libxml2:
 - '2.13'
 macos_machine:
@@ -28,3 +30,5 @@ r_base:
 - '4.5'
 target_platform:
 - osx-arm64
+zlib:
+- '1'

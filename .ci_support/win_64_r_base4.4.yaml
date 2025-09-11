@@ -4,6 +4,8 @@ channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
+liblzma_devel:
+- '5'
 libxml2:
 - '2.13'
 m2w64_c_compiler:
@@ -22,3 +24,5 @@ r_base:
 - '4.4'
 target_platform:
 - win-64
+zlib:
+- '1'
