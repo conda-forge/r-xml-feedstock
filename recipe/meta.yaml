@@ -1,4 +1,4 @@
-{% set version = "3.99-0.23" %}
+{% set version = "3.99-0.24" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/XML_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/XML/XML_{{ version }}.tar.gz
-  sha256: ecd13e11563ccc03196daec2b3dfc68368daab1877d540e1415e88cd31d61998
+  sha256: 45325462fb067e99792700124322cbe10ba5f97936d54d0fb28c7dd0cb1e241d
 
 build:
   number: 0
